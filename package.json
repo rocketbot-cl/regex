@@ -1,0 +1,130 @@
+{
+    "author":"Belkis Guanipa",
+    "description": "Módulo para trabajar con regex | Module to work with regex ",
+    "description_lang": {
+        "en": "Module to work with regex. Read and edit regex files",
+        "es": "Módulo para trabajar con regex. Lee y edita archivos regex",
+        "pr": "Módulo para trabalhar com regex. Ler e editar arquivos regex"
+    },
+    "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version":"1.0.0",
+    "license": "MIT",
+    "homepage":"http://rocketbot.com/",
+    "linux": true,
+    "windows":true,
+    "mac":true,
+    "docker":false,
+    "name": "regex",
+    "dependencies": {
+        "pyparsing" : "3.2.0"
+    },
+      "title": {
+        "en": "regex",
+        "es": "regex",
+        "pr": "regex"
+    },
+    "icon": "data:image/png;base64,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",
+    "children": [
+        {
+        "en": {
+            "title": "Starts with",
+            "description": "Detects text strings that begin with a letter or number.",
+            "title_options": null,
+            "options":null
+        },
+        "es": {
+            "title": "Comienza con",
+            "description": "Detecta cadenas de texto que comienzan con una letra o un número.",
+            "title_options": null,
+            "options": null
+        },
+        "pr": {
+            "title": "Comece com",
+            "description": "Detecta sequências de texto que começam com uma letra ou número",
+            "title_options": null,
+            "options": null
+        },
+        "form": {
+            "css": "modal-lg",
+            "inputs": [
+                
+                {
+                "type": "input",
+                "placeholder": {
+                    "es": "",
+                    "en": "",
+                    "pr": ""
+                },
+                "title": {
+                    "es": "Dato",
+                    "en": "Data",
+                    "pr": "Dados"
+                },
+                "description":{
+                    "es": "Dato para expresiones que inician con letra o número regex.",
+                    "en": "Encoding with which the regex file is required to be opened."
+                },
+                "id": "data",
+                "css": "col-md-2"
+                },
+                {
+                "type": "input",
+                "placeholder": {
+                    "es": "",
+                    "en": "",
+                    "pr": ""
+                },
+                "title": {
+                    "es": "Texto",
+                    "en": "Text",
+                    "pr": "Texto"
+                },
+                "description":{
+                    "es": "Texto a buscar las expresiones regulares que inicien en letra o número.",
+                    "en": "Text to search for regular expressions that start with a letter or number.",
+                    "pr": "Texto para pesquisar expressões regulares que começam com uma letra ou número"
+
+                },
+                "id": "text",
+                "css": "col-md-12"
+                },
+                {
+                "type": "input",
+                "placeholder": {
+                    "es": "var",
+                    "en": "var",
+                    "pr": "var"
+                },
+                "title": {
+                    "es": "Asignar resultado a variable:",
+                    "en": "Assign result to variable:",
+                    "pr": "Atribuir resultado à variável:"
+                },
+                "description":{
+                    "es": "Variable que almacena el resultado de la Er, regex.",
+                    "en": "Variable that stores the result of the Er, regex.",
+                    "pr": "Variável que armazena o resultado da Er, regex."
+                },
+                "remove_vars" : true,
+                "id": "result",
+                "css": "col-md-6"
+                }
+                
+            ]
+        },
+        "video_youtube": null,
+        "icon": "data:image/png;base64,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",
+        "module": "start_with",
+        "module_name": "regex",
+        "visible": true,
+        "options": false,
+        "father": "module",
+        "group": "scripts",
+        "linux": true,
+        "windows":true,
+        "mac":true,
+        "docker":true
+        }
+    ]
+}
+
