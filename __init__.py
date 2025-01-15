@@ -25,6 +25,7 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 """
 import os
 import sys
+from traceback import print_exception
 from pyparsing import*
 import json
 
@@ -36,6 +37,7 @@ if cur_path not in sys.path:
 
 from _regex import Regex
 
+
 """
     Obtengo el modulo que fue invocado
 """
@@ -45,21 +47,129 @@ if module == "start_with":
     data = GetParams("data")
     text = GetParams("text")
     result_var = GetParams("result") 
+    
+    
 
     try:
-        # data = eval(data)
-        regex = Regex(text)
-        result = regex.start_with(text, data)
-        if result is not None and result is not == "":
-            SetVar(result_var, result)
+        regex= Regex(text)
+        result = regex.start_with(text,data)
+        if result is not None and result != "":
+            SetVar(result_var,result)
+        else:
+            SetVar(result_var,"No matches")
             
+
     except Exception as e:
-        PrintException(e) 
+        print_exception(e)  
+        SetVar(result_var,"Error")
         raise e
 
     
-    # if result_var:
-    #     SetVar(result_var,flag_res)
+
+if module == "contains": 
+    data = GetParams("data")
+    text = GetParams("text")
+    result_var = GetParams("result") 
+    
+    
+
+    try:
+        regex= Regex(text)
+        result = regex.contains(data)
+        if result is not None and result != "":
+            SetVar(result_var,result)
+        else:
+            SetVar(result_var,"No matches")
+            
+
+    except Exception as e:
+        print_exception(e)  
+        SetVar(result_var,"Error")
+        raise e
+
+if module == "get_dates": 
+    text = GetParams("text")
+    result_var = GetParams("result") 
+    
+    
+
+    try:
+        regex= Regex(text)
+        result = regex.get_dates(text)
+        if result is not None and result != "":
+            SetVar(result_var,result)
+        else:
+            SetVar(result_var,"No matches")
+            
+
+    except Exception as e:
+        print_exception(e)  
+        SetVar(result_var,"Error")
+        raise e
+
+if module == "get_phone": 
+    text = GetParams("text")
+    result_var = GetParams("result") 
+    
+    
+
+    try:
+        regex= Regex(text)
+        result = regex.get_phone(text)
+        if result is not None and result != "":
+            SetVar(result_var,result)
+        else:
+            SetVar(result_var,"No matches")
+            
+
+    except Exception as e:
+        print_exception(e)  
+        SetVar(result_var,"Error")
+        raise e
+
+if module == "get_email": 
+    text = GetParams("text")
+    result_var = GetParams("result") 
+    
+    
+
+    try:
+        regex= Regex(text)
+        result = regex.get_email(text)
+        if result is not None and result != "":
+            SetVar(result_var,result)
+        else:
+            SetVar(result_var,"No matches")
+            
+
+    except Exception as e:
+        print_exception(e)  
+        SetVar(result_var,"Error")
+        raise e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
 """ De la linea 67 van los codigos de HTML hacia abajo"""

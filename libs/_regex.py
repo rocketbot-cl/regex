@@ -1,111 +1,129 @@
 import re
-from pyparsing import Word, alphas, nums,Literal, Optional, OneOrMore
+from pyparsing import Word, alphas, nums,Literal,Optional,OneOrMore
 
 class Regex:
     
-    def __init__(self, code):
+    def __init__(self,code:str):
         self.code = code
+        self.list_date = []
+        
     
-    def start_with(self, code, prefix): 
+    def start_with(self, code, prefix): # Detecta las cadenas de texto ya sea que empiecen con numeros o letras.
         if not code:
             raise ValueError("insert code")
         if not prefix:
             raise ValueError("insert prefix")
         pattern = rf'\b{re.escape(prefix)}\w*'
-        matches = re.findall(pattern, code)
+        matches = re.findall(pattern, code,flags=re.IGNORECASE)
         return matches
+
+
+    def contains(self, data):
+        if not self.code:
+            raise ValueError("Insert code")
+
+        if not data:  # Verifica si el dato está vacío
+            raise ValueError("Data cannot be empty")
+
+        pattern = r'\w*(?:' + re.escape(data) + r')\w*'
+
+        matches = re.findall(pattern, self.code,flags=re.IGNORECASE)
+
     
 
-    def  contains_only(self): #Detecta las cadenas de texto que contienen unicamente numeros o letras.
-        alpha_word = Word(alphas)
-        numeric_word = Word(nums)
-        
-        if not self.code:
-            raise ValueError("insert code")
-        
-        result = [] # Se crea una lista para guardar las cadenas de texto
-        
-        matches_alpha = alpha_word.searchString(self.code)   
-        result.extend([match[0] for match in matches_alpha if match[0].isalpha()]) # Agregar coincidencias solo con letras
-        matches_numeric =  numeric_word.searchString(self.code)
-        result.extend([match[0] for match in matches_numeric if match[0].isdigit()])
-        result = [item for item in result if item.isalpha() or item.isdigit()]
-        
-        if not result:  # Si no se encontraron coincidencias, se muestra el siguiente mensaje
-            print("Ingrese un texto que contenga palabras o numeros")
-        return result
+        return matches
 
-    def contains_date(self, date_str: str):
-        day = Word(nums, exact=2)("day")
-        month = Word(nums, exact=2)("month")
-        year = Word(nums, exact=4)("year")
-        format_date = year + Literal("/") + month + Literal("/") + day
 
-        try:
+    def get_dates(self, text:str):
+        
+        if text is None:
+            return "Error: The parameter provided is None."
+        if not isinstance(text, str):
+            return "Error: The parameter provided is not a valid text string."
+        
+        if not text.strip(): 
+            return "The text provided is empty or null."
+
+        # Expresiones regulares para formatos diferentes
+        patterns = [
+            r"\b(\d{4})[-/](\d{2})[-/](\d{2})\b",  # YYYY-MM-DD o YYYY/MM/DD
+            r"\b(\d{2})[-/](\d{2})[-/](\d{4})\b",  # DD-MM-YYYY o DD/MM/YYYY
+        ]
+
+        matches = []
+        for pattern in patterns:
+            matches.extend(re.findall(pattern, text))
+    
+
+        if not matches:
+            return "No dates found in the text."
+
+        for match in matches:
             
-            final_format = format_date.parseString(date_str)
-            year_val = int(final_format["year"])
-            month_val = int(final_format["month"])
-            day_val = int(final_format["day"])
+            if len(match[0]) == 4:  # YYYY-MM-DD
+                year_val, month_val, day_val = map(int, match)
+            else:  # DD-MM-YYYY
+                day_val, month_val, year_val = map(int, match)
 
-            # Valida el año
+            # Validación del año
             if not (1900 <= year_val <= 2100):
-                print("El año debe estar entre 1900 y 2100.")
-                return False
+                print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene un año fuera del rango permitido (1900-2100).")
+                
 
-            # Valida el mes
+            # Validación del mes
             if not (1 <= month_val <= 12):
-                print("El mes debe estar comprendido entre 1 y 12.")
-                return False
+                print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene un mes inválido.")
+                
 
-            # Valida el día
+            # Validación del día
             if not (1 <= day_val <= 31):
-                print("El día no es válido para el mes/año especificado.")
-                return False
+                print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene un día inválido.")
+                
 
             # Verifica meses con 30 días
             if month_val in {4, 6, 9, 11} and day_val > 30:
-                print(f"El mes {month_val} no tiene más de 30 días.")
-                return False
+                print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene más de 30 días en un mes que solo permite 30 días.")
+                
 
             # Verifica febrero
             if month_val == 2:
                 if (year_val % 4 == 0 and year_val % 100 != 0) or (year_val % 400 == 0):  # Año bisiesto
                     if day_val > 29:
-                        print("Febrero no tiene más de 29 días en un año bisiesto.")
-                        return False
+                        print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene más de 29 días en un año bisiesto.")
+                        
                 else:
                     if day_val > 28:
-                        print("Febrero no tiene más de 28 días en un año no bisiesto.")
-                        return False
+                        print(f"La fecha {day_val:02d}-{month_val:02d}-{year_val} tiene más de 28 días en un año no bisiesto.")
+                        
 
-            # Si todo es válido, guarda la fecha
-            self.list_date.append(date_str)
-            return f"Fecha válida y guardada: {date_str}"
+            # Si es válida, la añade a la lista en formato estándar YYYY/MM/DD
+            valid_date = f"{year_val:04d}/{month_val:02d}/{day_val:02d}"
+            self.list_date.append(valid_date)
 
-        except Exception as e:
-            return f"Error al analizar la fecha: {e}"
-
-    def contains_phone(self, phone:str):
-        plus_sign = Literal("+")
-        country_code = Word(nums, min=1, max=3)  # El código de país puede ser de 1 a 3 digitos
-        separator = Literal("-")
-        prefix = Word(nums, exact=1)  # El prefijo es de un numero
-        line_number = OneOrMore(Word(nums, exact=2))  # La funcion Oneormore hace que tengan formato de 2 numeros
+        return self.list_date
         
-        #Er del formato para nuestro numero de telefono
-        number_phone = Optional(plus_sign) + country_code + separator + prefix + OneOrMore(separator + Word(nums, exact=2))
-
-        try:
-            #Se hace el parseo con la funcion de la libs/ Verifica  una cadena de texto y si sigue un patron.
-            parsed_phone = number_phone.parseString(phone) 
-            
-            self.list_phone_numbers.append(phone) #captura y guarda el numero
-            #Printea el numero de telefono
-            print("Número de teléfono:", parsed_phone)
-            return parsed_phone
+    def get_phone(self, text: str = ""):
+        patterns = [
+        r'\+?\d{1,3}[-.\s]?\d{1,4}[-.\s]?\d{2,4}[-.\s]?\d{2,4}'
+        ]
+        phone_numbers = []
+        for pattern in patterns:
+            matches = re.findall(pattern, text)
+        for match in matches:
+            prefix = "+" if match.startswith("+") else ""
+            normalized_number = prefix + re.sub(r'\D', '', match)
+            phone_numbers.append(normalized_number)
+        return phone_numbers
     
+    def get_email(self, text: str = ""):
+        if not text:
+            raise ValueError("insert text")
         
-        except Exception as e:
-            print(f"Error al analizar el número de teléfono: {e}")
-            return None
+        patterns =  r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+        emails = re.findall(patterns, text)
+        return emails
+        
+        
+        
+
+    
