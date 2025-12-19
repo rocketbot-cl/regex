@@ -7,9 +7,8 @@
 Module to work with fixed or complex patterns through Regex  
 
 *Read this in other languages: [English](Manual_regex.md), [Português](Manual_regex.pr.md), [Español](Manual_regex.es.md)*
-
- ![banner](imgs\Banner_Regex.jpg)
-
+  
+![banner](imgs/Banner_regex.jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -60,3 +59,12 @@ Gets all the emails in a text
 | --- | --- | --- |
 |Text|Text where the email is obtained|Email: user@example.com|
 |Assign result to variable|Variable where the obtained emails are stored|{var}|
+
+### Validate pattern
+  
+Validates the required patron in the text.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Text|Text where the pattern is obtained.|Pattern in text|
+|Pattern|Pattern to look for within the text.|Pattern|
+|Assign result to variable|Variable where the obtained pattern is stored.|{var}|

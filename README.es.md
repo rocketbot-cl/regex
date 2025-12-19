@@ -31,7 +31,10 @@ Obtiene todas las fechas del texto ingresado
 Obtiene numeros de teléfonos de un texto
 
 5. Obtener correo  
-Obtiene todos los correos de un texto  
+Obtiene todos los correos de un texto
+
+6. Validar patrón  
+Valida el patron requerido en el texo.  
 
 
 
