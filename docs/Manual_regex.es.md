@@ -8,8 +8,7 @@ Módulo para trabajar con patrones fijos o complejos a través de Regex.
 
 *Read this in other languages: [English](Manual_regex.md), [Português](Manual_regex.pr.md), [Español](Manual_regex.es.md)*
   
-![banner](imgs\Banner_Regex.jpg)
-
+![banner](imgs/Banner_regex.jpg)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
@@ -60,3 +59,12 @@ Obtiene todos los correos de un texto
 | --- | --- | --- |
 |Texto|Texto donde se obtiene el correo electrónico|Correo: usuario@ejemplo.com|
 |Asignar resultado a variable|Variable donde se almacena los correos electrónicos obtenidos|{var}|
+
+### Validar patrón
+  
+Valida el patron requerido en el texo.
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Texto|Texto donde se obtiene el patron.|Patron en texto|
+|Patron|Patron a buscar dentro del texto.|Patron a coincidir|
+|Asignar resultado a variable|Variable donde se almacena el patron obtenido.|{var}|

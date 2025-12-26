@@ -7,7 +7,7 @@
         "pr": "Módulo para trabalhar com padrões fixos ou complexos através de Regex"
     },
     "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-    "version":"1.0.1",
+    "version":"1.2.1",
     "license": "MIT",
     "homepage":"http://rocketbot.com/",
     "linux": true,
@@ -449,6 +449,105 @@
         "video_youtube": null,
         "icon": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAICAgICAQICAgIDAgIDAwYEAwMDAwcFBQQGCAcJCAgHCAgJCg0LCQoMCggICw8LDA0ODg8OCQsQERAOEQ0ODg7/2wBDAQIDAwMDAwcEBAcOCQgJDg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7/wgARCAB/AH8DAREAAhEBAxEB/8QAHAABAAMBAQEBAQAAAAAAAAAAAAcICgkGBQME/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAECBAMF/9oADAMBAAIQAxAAAADv4AAADwcdPeTzAAAAAiaO9dq6pxnP72eULRo/vRGUdrN2xSBPMAAAQRGmDq6Z9tli2va1l8UEV0xBGixtsctTxAAAAH4EYx2lWeP4n7AAAFLCqgB9YvGWFByjPOgAsQX2BnOOGgAPuGvAvgYYCIgAdbTUeDOccNDf4CvRihOtxp1MMB0QNR4AAM5xw0NvoK/mRY0EHeAwwEtHUcA6wFngZzjhoACxhtGPVGGA8gSiAaajomDOccNDb6DlsZyzU4dYDDAdEDUeAADOccNDf4Cr5ijNIR26MMBbU71gHrS6QM5xw0N/gIaMNB3kNDBhgIiABbI2lAjg8OT+AQAfdJiILP5AAfVJqAIRro84vZG2SmFPQt5fz4brp9HNPaTzq7TbcK+Cr1dk5zm9dNABCEaPMxeytslMKehbm+CHK6PJOlhrZKs123Gtgq7XZNs5vazQAAAAAAAAf//EADQQAAAFAwICCAUEAwEAAAAAAAMEBQYHAQIIAAkYdhATFBUZIDhYERYwOVYSV2h3FyYyQP/aAAgBAQABEgD6CBI7Tc0kLbTRTwh1YSK30P2/TkWZWXGQ4RNeHMmFgYvQcBPHmqbJNHvJxezBEdOvrW2h+FWO+miluE8/17vtZVhQb9SG6gmTCjkc99adYSJ3VLUxaaoiVB510n6VqqOM5UaokxsWVFd/pbsjNf7uHJkKFxiRDIiSWIdBTZaYg99nxpZQ+wZMaMko5s01zoo95T9HbC30JZghFlNYAWRVg0irpcnQqCNRIyWh4GliSZ+emyX/AOQIYlg1KKCt1UUHuFSSRgwTNmTKmbcTsYcSo9/xPKx6wyaokJZREaycjEA+qIkSoZcvZMkzLkfu1Ka7Ya1HAuqRTrwL6x7kPL1n+8Lvyk3RfhWpGKoiQ4oSFMJKPm1I4pdVU6P9KwuAGcGMBgB2GBqW0FFBidGtyYHlE0pHTyzULqy5bXZwO31NdSH2mtnV1F8+VGdUSYiPJoockt13rhtxEhjZK/xq8WPwGVdeNXix+Ayrrxq8WPwGVdIu8xiYqrXZTyBIzbA/RWvbITyrx+yHAEpEsmJjmUggutHSOh4bweNDJlt1MxVY0mjqiArmUs4L41eLH4DKuvGrxY/AZV141eLH4DKuvGrxY/AZV1jJuIwplbkIfjaO2u90ZdKIYyuIP0b3/qFgXl1Q8raczhZr9SnS1Fo63HGmGbTCep7fmXPFjh1eouHqAJRawwac7ANZA+vSbufljy7MP3X3P/Wp/p3v/ULAvLqh5J+xgh3I6IltsyE0E0dTOFrrCLjcSGdbD/XW2pUtoopKgMRNU2VltRKblL/QAb691qMdjjmgtZA+vSbufljWzD919z/1qf8APvf+oWBeXVDo4scWPctFWuLHFj3LRVqddyXFyIIsWzqDJSLKbzDAuokIS0rnXA8VdeUxKCqKkdFNm79liCVVHaEj5CrZK8mVXAaN5s11kD69Ju5+WNYYZS8ImV6pKHyL/kLtjaHRu7PHO/i5rxzv4ua8c7+LmsRMjuKnDQhLnyb8idpVDRHuno3v/ULAvLqh5cX6428UaPZlAA5BI9uGD+IjGKs4lDbWKx4EmAMSxKA+X7NZA+vSbufljTLYD7kd1ioMdslefq6EWuNCJ3CdlP7aZV1wnZT+2mVdcJ2U/tplXW1wyXnH202iNx+tFaZDhscaiLel9G9/6hYF5dUOjhOxY9tMVa4TsWPbTFWtx/b6hNv4POabYZZwDAdLTqEaVE7WzvJCq8trZSaiuavN3sp1jppCusgfXpN3PyxrZh+6+5/61P8An3v/AFCwLy6oeTNYtU1tIZGh0DoL8GApidGyJ6TZu5tK9GQPr0m7n5Y1tkzrFWPW4QuviX3T8oNYdkG00E74o2Cf7568UbBP989eKNgn++emJuG4eyZMLdYLIl/vt2rp20mlEOje/wDULAvLqh5MimuZeuAE3tAlZW88ssNXIlaa2UZda6Q5pbhlZVASDkXRiqu3QNZA+vSbufljy4JfeEx45zK9L4h6I5OUSBySYtaEhGyIdwRIfhOxY9tMVeThQxa9tcV6bGPEAMp8kHOzYMj5pOUjW6pJW0oYv4zqy8eVVXHeMlNUOj3mDhzhOxY9tMVa4TsWPbTFWuE7Fj20xVrhOxY9tMVaQcbcdms8U5xNiBI5bi+QGoOQU+mdXO52xHrXvaix3EoqTnLJwhoFbkhiZIsZrOV7gP8ATHLaYsrZptPV5OWrhMqmRCOw7yi2YJgJiNYZCaKWGcU7Vs3aTCoOovJ2PNZyDKxewVEs3TISZ3ksLjHpKCa81ZBfApZyooYNBk1zOo6aTYucqiSF6g6VSjA4AjHcrwdDRQFM/ksipKmf/TW9E0/pJe8WyqvFlO8Zyoa2nVvaFGOUdBOL0oN5q3fDmuC6w+N5J1ZKu+4+a6Qkpne1gLnLGVAItDoTGyoZDgjpvXkm1UuZAcPQ2mU8mzVwllTHdHfl5tbMGwFNCFODM5MFPpFqAduLWdcmvJqvVEyGLSewUws5Bhkzu1YRIsjFwtrJcw7x2aUZyGeQxgqkHUSNKUXOVOJB9edNJRgAANmNt6NRkIieaxlRVxYT6U+Kxp8Rg75WktzG18IVvoaQnXAM6yPjLtMxQl0fKVclOcEPqTlv/i//xABAEAACAQIDBAYFCgMJAAAAAAABAgMEEQAFEhATITEVFyAihNMGMEFS1RQWMkJRYXFygdSio+UjM0BDRGN0gpH/2gAIAQEAEz8A9QKZ1jjKPoYayNJOrhwPrKOAvI8ZZlDFjZALqRxN8boSsPxnktCn4Wv9hwauSoaAIGGku35uS8Bg8nmbuRL+rlcP9Iwxkql/xYyt94YYWuMLTkSOwNiN2473JziGA00j/aR/lS/9SoxPA0ctOXvpDX4G+luKkj1KIssBQO7jVGbEm7txDDCA1iqg5LuzaZBb2IdIwsxZZC4bkCAUtpPA3x7qljFET91zKx/IMe6iKFUf+AYYu4XvsgURINTm6+xhiS0YK/8AHi+kR9krA4qioB3evToUDujvtzJ9WqAM4W9rnmbXNvxxLo3FON3uhoAW/Bb+3mxOzQNZW99N+dr8beo9GqCknREicIwkM9TCQcdCZX8Rx0JlfxHHQmV/EcZlkFI8X8islf8Ahw4kpMwiX2k006pKVB5uFK7aTJstMLywTNE5QtmAJUlMdCZX8Rx0JlfxHHQmV/EcdCZX8Rx6RZbRQUxhiliiIBhq5W13nT6u3xEfZy6oaGoppV5OjqQQcQWRalil4a5EH0EmAe4sAHSQDZ4+bs+NoNviI+xFRIMzy2bRaOeKcAPdTY6CdDAWYEYQ3XeQyNG9v1U4/wByCupBG/8ANkGzx82PG0Hb8RHs6w8r8/HWHlfn49FK0ZglVOUugepivDHHcjWxe4F7AthVsGklcu5A9lyxw6WM8Ecolq5h9qGVIEH3wybPHzY6a6N0b2eCXe73czXtuLadOOsn+m46yf6bjrJ/puOl+kLbh9Ove7mLn+Tb4iPs5BOFhR7/AOsUDfGD3jAwkGMlCfIhR6AYTDo7u7KWII4EbPHzY9HcnnzCpSFWCtKY4UZggLoC1rAsMdXmaeRjq8zTyMdXmaeRjP8AKpqCqCPKCrmKZVex2+Ij2dXmV+Rjq8yvyMZQXFFmdG8wjl/sSSkTxa96GS11Rwdjm5SjljiqY0/SSWcDZ4+bHjaDt+Ij7H5IHfZ4XZ4+bHRtVWXqZKqkkRNFNFI/FYnx8zM8/ZY+ZmefssfMzPP2WPmrm8G/mbkuuWlVF/FmG3xEfYTiTLJRSpH/ABEbJnA+X7mOVKqNPtdV3T290Ps8fN6j0l9GqTMXpkY3ZY2njYoCQCQMdXmV+R2Or3K/IxkvoZQUdXTFkKMY5YoVdLqzKbEXBI2VfoFlss08rsWeR3aElmYkkk46vMr8jHV5lfkY6vMr8jHV5lfkYyv0Iy+mqqWQcnjlSEMjfeD2PkkU9o5I5b92QEc1U4GSw0U1EYlDCQCK9wb8ybWDbK/KMuaQxIRpe8jIxBuRy+rhIljWrcKNUwRSVUObtYcBfFRRipamjLaVSONu6xJK3v73MWN4IYqZ5muA0MkCNdTY3BC24G7EkY0htDpEzKbHgbEDniXJstM6MXsIvpq1z+UHYKKMGmrQwX5OxjUFxdg3eubBQDcnAhjjVHbju1EaqLKO7f22J7PylIbUwjlSRrsy++BZTqwK/eBQyWjNp5C/0rE6Pd2V+b5csm6cjSlpFdgBYnn9bCTrMtI1v7sOgCsF5XAtiorFpnnjDhleOR+6pFlvf3eRvimzg1zU8xmja0juxLOwDHuDQABjUF1u8TKoueAuSOeJc7y1J5XDFhJcozAjhY6jsFZGTNVE6jUtu2OkEoAQ1jpK+0HBnilE5XgJQY2Yd4cSOFjfhb/B/wD/xAAfEQADAAEDBQAAAAAAAAAAAAAAAREQMECBICExcHH/2gAIAQIBAT8A2lK2JYQ0UTujDuhDw2RsSmpPTbPGOcq4X3QZJ0rHGJtP/8QAKREAAgIBAgUCBwEAAAAAAAAAAQIAAxESIRATMDFBBFEgMkBhcIGRsf/aAAgBAwEBPwDoNWyqGPnqV1PZ2gppr3cy50bGjxK11uFnqGy+n2lL1hSricit96zHravZujVe1YxM+nt77GW1cvznM9OAoaw+ISScmU0q4JY7TXRV8oyZZa1p36nNPL0ePw3Qqsx1e0xW9bEDGODIi4wmf7D3MRUFet94/LIyu32iAFgDHVFJGj/eFdaWptsR3j6Sx09vhpcIxJ9pzddRDnfxwZ0bGHx/YcZODEZDXofaWWK1enOYhAYEx2RiTzNv3wSxKlGPPeOEDHSdvo//2Q==",
         "module": "get_email",
+        "module_name": "regex",
+        "visible": true,
+        "options": false,
+        "father": "module",
+        "group": "scripts",
+        "linux": true,
+        "windows":true,
+        "mac":true,
+        "docker":true
+        },
+         {
+        "en": {
+            "title": "Validate pattern",
+            "description": "Validates the required patron in the text.",
+            "title_options": null,
+            "options":null
+        },
+        "es": {
+            "title": "Validar patrón",
+            "description": "Valida el patron requerido en el texo.",
+            "title_options": null,
+            "options": null
+        },
+        "pr": {
+            "title": "validar padrão",
+            "description": "Valide o patrono exigido no texto.",
+            "title_options": null,
+            "options": null
+        },
+        "form": {
+        "css": "modal-lg",
+        "inputs": [
+            {
+    
+            "type": "textarea",
+            "placeholder": {
+                "es": "Patron en texto",
+                "en": "Pattern in text",
+                "pr": "Padrão no texto"
+            },
+            "title": {
+                "es": "Texto",
+                "en": "Text",
+                "pr": "Texto"
+            },
+            "description":{
+                "es": "Texto donde se obtiene el patron.",
+                "en": "Text where the pattern is obtained.",
+                "pr":"Texto onde o padrão é obtido."
+            },
+            "id": "text",
+            "css": "col-md-12"
+            },
+            {
+            "type": "input",
+            "placeholder": {
+                "es": "Patron a coincidir",
+                "en": "Pattern",
+                "pr": "Padrão de coincidir"
+            },
+            "title": {
+                "es": "Patron",
+                "en": "Pattern",
+                "pr": "Padrão"
+            },
+            "description":{
+                "es": "Patron a buscar dentro del texto.",
+                "en": "Pattern to look for within the text.",
+                "pr":"Padrão a ser procurado no texto.."
+            },
+            "id": "pattern",
+            "css": "col-md-4"
+            },
+            {
+            "type": "input",
+            "placeholder": {
+                "es": "{var}",
+                "en": "{var}",
+                "pr": "{var}"
+            },
+            "title": {
+                "es": "Asignar resultado a variable:",
+                "en": "Assign result to variable:",
+                "pr": "Atribuir resultado à variável:"
+            },
+            "description": {
+                "es": "Variable donde se almacena el patron obtenido.",
+                "en": "Variable where the obtained pattern is stored.",
+                "pr": "Variável onde o padrão obtido é armazenado."
+            },
+            "remove_vars" : true,
+            "id": "result",
+            "css": "col-md-4"
+            }
+            ]
+        },
+        "video_youtube": null,
+        "icon": "data:image/jpeg;base64,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",
+        "module": "validate_pattern",
         "module_name": "regex",
         "visible": true,
         "options": false,

@@ -31,7 +31,10 @@ Obtém todas as datas do texto inserido
 Obter números de telefone de um texto
 
 5. Obter e-mail  
-Obtém todos os e-mails em um texto  
+Obtém todos os e-mails em um texto
+
+6. validar padrão  
+Valide o patrono exigido no texto.  
 
 
 

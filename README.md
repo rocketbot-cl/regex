@@ -31,7 +31,10 @@ Gets all dates from the entered text
 Get phone numbers from a text
 
 5. Get email  
-Gets all the emails in a text  
+Gets all the emails in a text
+
+6. Validate pattern  
+Validates the required patron in the text.  
 
 
 

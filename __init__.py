@@ -148,6 +148,25 @@ if module == "get_email":
         raise e
 
 
+if module == "validate_pattern": 
+    text = GetParams("text")
+    pattern = GetParams("pattern")
+    result_var = GetParams("result")
+    
+    try:
+        
+        import re 
+        matches = re.findall(pattern, text)
+        if matches:
+            SetVar(result_var, ",".join(matches)) 
+        else:
+            SetVar(result_var, "No matches")
+
+            
+    except Exception as e:
+        print_exception(e)  
+        SetVar(result_var,"Error")
+        raise e
 
 
 
